@@ -1,0 +1,245 @@
+.header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid var(--smokey-black);
+  box-shadow: 0 5px 10px var(--smokey-black);
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.hamburger_menu {
+  display: none;
+}
+
+.logo_navlink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  height: fit-content;
+  width: max-content;
+  text-decoration: none;
+  color: var(--smokey-black);
+}
+
+.logo img {
+  margin-bottom: 12px;
+  height: 40px;
+}
+
+.logo p {
+  margin: auto 0;
+  font-size: 1.7rem;
+  letter-spacing: -1px;
+  width: fit-content;
+  color: rgb(10, 10, 10);
+}
+
+.navbar {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--smokey-black);
+  margin-top: 15px;
+  width: 100%;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  list-style-type: none;
+  position: relative;
+}
+
+nav li {
+  list-style: none;
+}
+
+.nav_btn {
+  background-color: var(--primary-color);
+  text-align: center;
+  border: none;
+  height: 70px;
+  margin: 0 10px;
+  width: fit-content;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.nav_btn:hover {
+  color: #2c2c2c;
+  transition-duration: 0.3s;
+  letter-spacing: 0.2px;
+}
+
+.signinBtn {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  border: none;
+  width: max-content;
+  height: 50px;
+  margin: 0 15px 5px;
+  padding: 10px 15px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+  box-shadow: 5px 8px var(--smokey-black);
+}
+
+.signinBtn:hover {
+  background-color: var(--button-hover-color);
+  color: #2c2c2c;
+  letter-spacing: 0.3px;
+  transition-timing-function: 0.3s ease-in-out;
+}
+
+.logged_in_icon {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 5px;
+  color: var(--smokey-black);
+}
+
+.logged_in_icon img {
+  background-color: var(--smokey-black);
+}
+
+.sidebar {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media only screen and (max-width: 892px) {
+  .logo img {
+    display: none;
+  }
+
+  .logo p {
+    display: block;
+    width: max-content;
+    left: 0;
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+  }
+
+  .hamburger_menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 30px;
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+
+  .menu {
+    height: 40px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .sidebar {
+    display: inline;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 340px;
+    padding: 0 auto 10px;
+    width: 200px;
+    z-index: 999;
+    background-color: #c0bc92;
+    border-radius: 0 0 0 50%;
+    flex-direction: column wrap;
+    text-align: center;
+    align-items: center;
+  }
+
+  .sidebar_btn {
+    background-color: none;
+    text-align: center;
+    border: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    margin: 5px 0 5px 45px;
+    background-color: #edc9af00;
+  }
+  .sidebar_btn:hover {
+    color: #2c2c2c;
+    transition-duration: 0.3s;
+    letter-spacing: 0.2px;
+  }
+
+  .signinBtn {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    border: none;
+    width: max-content;
+    height: max-content;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+    margin: 5px 0 5px 45px;
+    font-size: 1.2rem;
+    box-shadow: 3px 5px var(--smokey-black);
+    cursor: pointer;
+  }
+  .close {
+    display: block;
+    width: 4vw;
+    margin: 5px 0 0 55px;
+    background-color: #c0bc92;
+    border: none;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .logo p {
+    font-size: 1.5rem;
+  }
+  .logo img {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .navbar.is-open {
+    display: flex;
+    justify-content: left;
+    flex-flow: column wrap;
+    padding-bottom: 10px;
+    position: static;
+    top: 0;
+    margin-top: 70px;
+    margin-right: 2%;
+    background-color: var(--secondary-color);
+    border: 3px solid var(--smokey-black);
+    width: 150px;
+    height: max-content;
+    border-radius: 0 0 10px 10px;
+  }
+}

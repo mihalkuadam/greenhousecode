@@ -1,0 +1,189 @@
+.profile_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin: auto;
+    padding: 1% 0 5%;
+    width: 60%;
+}
+
+.profile_header_container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 0rem;
+    padding: 2%;
+    width: 100%;
+    background-image: url('./../../../assets/prbg.svg');
+    background-color: var(--secondary-color);
+    border-left: 3px solid var(--smokey-black);
+    border-top: 3px solid var(--smokey-black);
+    border-right: 3px solid var(--smokey-black);
+    border-radius: 10px 10px 0 0;
+    box-shadow: 10px 10px var(--smokey-black);
+}
+
+.user_pic {
+    width: 110px;
+    height: 110px;
+    border: 8px solid var(--black);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.profile_header_container h1 {
+    font-size: 3.5rem;
+}
+
+.profile_header_container h2 {
+    font-size: 2rem;
+    padding: 0 auto;
+}
+
+.profile_header_container h4 {
+    font-size: 1.6rem;
+    margin:  0 auto;
+}
+
+.rank_pic {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px -6px;
+}
+
+.profile_body {
+    display: flex;
+    border: 3px solid var(--smokey-black);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 10px 10px var(--smokey-black);
+    width: 104%;
+    min-height: max-content;
+    background-color: #fdfaf3;
+}
+
+.profile_navbar {
+    display: flex;
+    flex-flow: column;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-right: 3px solid var(--smokey-black);
+}
+
+.profile_navlink {
+    list-style: none;
+    font-size: 2rem;
+    padding: 10px;
+    transition-duration: 0.3s;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.profile_navlink:hover {
+    color: #100c08a7;
+    letter-spacing: 0.3px;
+    transition-timing-function: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.profile_content {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 90%;
+    padding: 10px;
+}
+
+.status-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .xp p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .xp h4 {
+    margin-bottom: 10px;
+  }
+  
+  .status-bar-fill {
+    height: 100%;
+    background-color: var(--black);
+  }
+
+  .xp {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 auto;
+  }
+
+  /* MEDIA QUERIES */
+
+@media only screen and (max-width: 930px) { 
+        
+    .profile_body {
+        flex-flow: row wrap;
+        height: 100%;
+        padding: auto;
+    }
+
+    .profile_navbar {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-bottom: 3px solid var(--smokey-black);
+        border-right: none;
+    }
+
+    .profile_navlink {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) { 
+    .profile_container {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 500px) { 
+    .rank_pic {
+        width: 30px;
+        height: 30px;
+    }
+    .user_pic {
+        width: 90px;
+        height: 90px;
+    }
+    .profile_header_container h1 {
+        font-size: 3.5rem;
+    }
+    
+    .profile_header_container h2 {
+        font-size: 2.0rem;
+        padding: 0 auto;
+    }
+    
+    .profile_header_container h4 {
+        font-size: 1.6rem;
+        margin:  auto;
+    }
+    .profile_navlink {
+        font-size: 1.7rem;
+    }
+    .profile_container {
+        margin: 2% auto;
+    }
+}

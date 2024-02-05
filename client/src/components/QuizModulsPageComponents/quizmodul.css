@@ -1,0 +1,167 @@
+.description_container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    text-align: left;
+    margin-left: 9%;
+    padding: 2% 0;
+}
+
+.description_container h1 {
+
+    font-size: 3.5rem;
+}
+
+.description_container p {
+    width: 90%;
+    font-size: 1.8em;
+    padding: 0 auto;
+}
+
+.quizmodul_main_container {
+  display: flex;
+  flex-flow: column;
+  margin: 20px auto;
+}
+
+.language_card_container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  margin-bottom: 50px;
+}
+
+.language_card_content {
+  width: 100%;
+}
+
+.language_card_content img {
+  background-color: white;
+}
+
+.language_card_content h3 {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 23pt;
+    border-bottom: 3px solid var(--smokey-black);
+}
+
+.card {
+  margin: 15px;
+}
+
+.card button, .handler button {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    border: none;
+    width: 165px;
+    height: 40px;
+    margin: 10px 0 20px;
+    padding: 5px;
+    font-size: 17pt;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+    box-shadow: 5px 5px var(--smokey-black);
+}
+
+.card button:hover,
+.handler button:hover {
+  background-color: var(--button-hover-color);
+  color: #2c2c2c;
+  letter-spacing: 0.2px;
+  transition-timing-function: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card label {
+    font-style: normal;
+    font-size: 20pt;
+    width: 100%;
+}
+
+.card select, .card input {
+    margin: 0 0 10px;
+    padding: 5px;
+    border: 2px solid var(--smokey-black);
+    border-radius: 5px;
+    width: 130px;
+    font-size: 17pt;
+}
+
+.title_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  background-color: white;
+  height: 5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 45px;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: 3px solid var(--smokey-black);
+}
+
+@media only screen and (max-width: 850px) {
+  .description_container {
+    padding: 0 auto;
+  }
+
+  .language_card_container {
+    justify-content: center;
+  }
+
+  .description_container h1 {
+    padding-top: 20px;
+
+  }
+
+  .description_container p {
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .description_container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.report-container {
+  width: 100%;
+  float: right;
+  text-align: right;
+}
+
+.report-button {
+  border-radius: 10px;
+  border: none;
+  margin: 5px 15px 5px 5px;
+  font-size: 13pt;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+  box-shadow: 5px 5px var(--smokey-black);
+}
+
+.report-button:hover {
+  color: #2c2c2c;
+  letter-spacing: 0.2px;
+  transition-timing-function: 0.1s ease-in-out;
+  cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  .description_container {
+    width: 80%;
+    }
+}

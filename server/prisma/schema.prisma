@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Question {
+  id               String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  description      String
+  level            Level
+  topicId          Int      @map("topic_id")
+  isMultiSelectQuestion Boolean  @default(false) @map("isMultiSelectQuestion")
+  createdAt        DateTime @default(now()) @map("created_at")
+  updatedAt        DateTime @updatedAt @map("updated_at")
+  isActive         Boolean  @default(true)
+  answers          Answer[]
+  topic            Topic    @relation(fields: [topicId], references: [id])
+
+
+  @@map("question")
+}
+
+model Answer {
+  id         Int      @id @default(autoincrement())
+  questionId String   @map("question_id") @db.Uuid
+  name       String
+  isCorrect  Boolean  @map("is_correct")
+  question   Question @relation(fields: [questionId], references: [id])
+
+  @@map("answer")
+}
+
+model Topic {
+  id          Int        @id @default(autoincrement())
+  name        String
+  description String?
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+  question    Question[]
+
+  @@map("topic")
+}
+
+model User {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  username  String   @unique
+  password  String
+  email     String   @unique
+  role      String   @default("user")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  score     Score?   
+  subscribe Boolean  @default(false)  
+
+  @@map("user")
+}
+model Score{
+userId       String   @id @db.Uuid
+user        User @relation(fields: [userId], references: [id])
+xp          Int @default(0)
+
+@@map("score")
+}
+
+
+enum Level {
+  EASY
+  MEDIUM
+  HARD
+}

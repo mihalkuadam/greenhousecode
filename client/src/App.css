@@ -1,0 +1,38 @@
+:root {
+  /*--primary-color: #EDC9AF;*/
+  --accent-color: #ae5e1c;
+  --button-hover-color: #af4128;
+  --primary-color: #deccb1; 
+  --secondary-color: #7da874;
+  --smokey-black: #0d120cd0;
+  --grey-background: #e1e1e1;
+  --black: rgb(12, 12, 12);
+
+  /* 2.verzio */
+  /*--accent-color: #d9a873; */
+  /*--accent-color: #f7bb41; */
+  /*--text-color: #898987;*/
+  /*--secondary-color: #69955a; */
+  /*--smokey-black: #262626;*/
+
+}
+
+
+.dark {
+  --primary-color: #100C08; 
+  --secondary-color: #5b7757;
+  --smokey-black: #f0efed;
+  --accent-color: #BF5700;
+  --button-hover-color: #af4128;
+}
+
+* {
+  margin: 0;
+  padding: 0;  
+  font-weight: bold;
+  text-decoration: none;
+}
+
+* input:focus {
+  outline: none;
+}
